@@ -13,7 +13,7 @@ int main()
     cout << "Informe a palavra que deseja inverter : \n";
     // cin >> conteudo;
     getline(cin, conteudo); // Para ler considerando espaços entre as palavras
-    cout << "Palavra digitada: " << conteudo;
+    cout << "Palavra digitada: " << conteudo << endl;
 
     for (int i = 0; i < conteudo.size(); i++) // Percorre toda a palavra
     {
