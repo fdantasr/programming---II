@@ -18,16 +18,16 @@ bool par(int x)
 
 int main()
 {
-    int vet[MAX_SIZE];
+    int vet[MAX_SIZE]; // Tamanho máximo do vetor
     int num;
     cout << "Entre com o tamanho do vetor: ";
     cin >> num;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < num; i++)
     {
         cin >> vet[i];
     }
-    for (auto x : vet)
+    for (auto x : vet) // vai percorrer os valores de vet atribuir eles a x e imprimir os valores como um laço
     {
         if (par(x))
         {

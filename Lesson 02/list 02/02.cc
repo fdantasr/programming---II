@@ -9,21 +9,21 @@ int main()
 {
 
     string conteudo;
-
+    
     cout << "Informe a palavra que deseja inverter : \n";
     // cin >> conteudo;
     getline(cin, conteudo); // Para ler considerando espaços entre as palavras
     cout << "Palavra digitada: " << conteudo << endl;
 
-    for (int i = 0; i < conteudo.size(); i++) // Percorre toda a palavra
+    for (int i = 0; i < conteudo.length(); i++) // Percorre toda a palavra
     {
         cout << conteudo[i] << endl;
     }
     cout << "O conteúdo digitado inversamente fica : \n";
 
-    for (int i = conteudo.size() - 1; i >= 0; i--) //Enquanto o meu i for igual a 0 ou maior, o for roda.
+    for (int i = conteudo.size() - 1; i >= 0; i--) // Enquanto o meu i for igual a 0 ou maior, o for roda.
     {
-         cout << conteudo[i] << endl;
+        cout << conteudo[i] << endl;
     }
 
     return 0;
