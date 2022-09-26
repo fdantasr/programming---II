@@ -12,3 +12,8 @@ The course is divided into 3 units.
 * Unit 2: Classes concept, encapsulation, access modifiers, variable scope,objects, constructors and destructors, aggregation, inheritance and polymorphism.
 * Unit 3: Exceptions, namespace, compilation and execution, generic programming,
 entrance and exit.
+
+### To compile a c++ program, run:
+```
+g++ -o name_of_file name_of_file.cpp.
+```
