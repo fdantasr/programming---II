@@ -15,13 +15,12 @@ entrance and exit.
 
 ### To compile a C++ program, run:
 ```
-g++ -o file_name file_name.cpp.
+g++ -o file_name file_name.cpp
 ```
 * [Visual Studio Code](https://code.visualstudio.com/) - Code editor used
 * [Doc](https://code.visualstudio.com/docs/cpp/config-msvc) - Documentation to learn how to use c++ in Vscode
-<br>
-<br>
-<br>
 
+<br>
+<br>
 
 Made with ♥ by [Felipe Dantas](https://https://github.com/fdantasr) 
