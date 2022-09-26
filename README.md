@@ -1,5 +1,5 @@
 ### Programming - II
- Code repository for Programming (II) classes of the computer science course. Programming subject 2 is focused on the object-oriented programming paradigm, using the C++ language.
+ In this repository you can find issues related to topics of each module as mentioned below, as well as practical examples used in the computer science course.
  
 ### Unitis
 The course is divided into 3 units.
@@ -22,8 +22,7 @@ g++ -o file_name file_name.cpp
 
 ### How it works
 
-In this repository you can find issues related to topics of
-each module as mentioned below, as well as practical examples used in the computer science course.
+Code repository for Programming (II) classes of the computer science course. Programming subject 2 is focused on the object-oriented programming paradigm, using the C++ language.
 
 <br>
 <br>
