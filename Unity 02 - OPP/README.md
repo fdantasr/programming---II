@@ -1,1 +1,1 @@
-# Conceito de classes, encapsulamento, modificadores de acesso, escopo de variável,objetos, construtores e destrutores, agregação, herança e polimorfismo
+### Concept of classes, encapsulation, access modifiers, variable scope, objects, constructors and destructors, aggregation, inheritance and polymorphism
