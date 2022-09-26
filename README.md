@@ -26,4 +26,4 @@ Code repository for Programming (II) classes of the computer science course. Pro
 
 <br>
 <br>
-Made with ♥ by [Felipe Dantas](https://https://github.com/fdantasr/) 
+Made with ♥ by Felipe Dantas
