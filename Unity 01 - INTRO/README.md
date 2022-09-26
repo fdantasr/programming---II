@@ -1,1 +1,1 @@
-# Introdução a C++, conceitos fundamentais, estruturas, ponteiros, alocação dinâmica
+### Introduction to C++, fundamental concepts, structures, pointers, dynamic allocation
