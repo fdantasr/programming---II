@@ -13,7 +13,15 @@ The course is divided into 3 units.
 * Unit 3: Exceptions, namespace, compilation and execution, generic programming,
 entrance and exit.
 
-### To compile a c++ program, run:
+### To compile a C++ program, run:
 ```
 g++ -o name_of_file name_of_file.cpp.
 ```
+* [Visual Studio Code](https://code.visualstudio.com/) - Code editor used
+* [Doc](https://code.visualstudio.com/docs/cpp/config-msvc) - Documentation to learn how to use c++ in Vscode
+<br>
+<br>
+<br>
+
+
+Made with ♥ by [Felipe Dantas](https://https://github.com/fdantasr) 
