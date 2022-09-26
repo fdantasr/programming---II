@@ -20,7 +20,11 @@ g++ -o file_name file_name.cpp
 * [Visual Studio Code](https://code.visualstudio.com/) - Code editor used
 * [Doc](https://code.visualstudio.com/docs/cpp/config-msvc) - Documentation to learn how to use c++ in Vscode
 
-<br>
-<br>
+### How it works
 
+In this repository you can find issues related to topics of
+each module as mentioned below, as well as practical examples used in the computer science course.
+
+<br>
+<br>
 Made with ♥ by [Felipe Dantas](https://https://github.com/fdantasr) 
