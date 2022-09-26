@@ -81,5 +81,18 @@ int main()
         cout << "Potencia acima de 40" << endl;
     }
 
+    // L2
+    cout << "Informe a potencia da lampada: " << endl;
+    cin >> l2.potencia;
+
+    if (l2.ehEconomica() == true)
+    {
+        cout << "Potencia abaixo de 40" << endl;
+    }
+    else
+    {
+        cout << "Potencia acima de 40" << endl;
+    }
+
     return 0;
 }
