@@ -65,7 +65,9 @@ void Fatura::totalFatura()
         c.imprime();
         totalSum += c.totalItem();
     }
-    cout << "Total fatura: " << totalSum << endl;
+    cout << "SUA FATURA TOTAL É DE: " << totalSum << endl;
+     cout << "------------------------------ " << endl;
+    cout << "NUBANK PAGAMENTOS" << endl << endl;
 }
 
 // Desenvolvendo os métodos
