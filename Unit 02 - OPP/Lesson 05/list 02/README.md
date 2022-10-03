@@ -1,9 +1,9 @@
 ### 1. Crie a classe ItemFatura, com os seguintes atributos:
 ```
- id : int <br>
- nome : String <br>
- qtd : int <br>
- precoUnit : float <br>
+ id : int 
+ nome : String 
+ qtd : int 
+ precoUnit : float 
 ```
 Sua classe deve conter: <br>
 a) Dois construtores: um default que inicialize o nome do produto com a string “None” e outro
