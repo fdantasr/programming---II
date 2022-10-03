@@ -6,7 +6,7 @@
  precoUnit : float 
 ```
 #### Sua classe deve conter: <br>
-* Dois construtores: um default que inicialize o nome do produto com a ```string “None”``` e outro
+* Dois construtores: um default que inicialize o nome do produto com a ```string “Nome”``` e outro
 que inicialize os atributos com todos os valores passados por parâmetro; 
 * Métodos seletores e modificadores para cada um dos atributos da classe; 
 * Um método ```totalItem()``` que retorna o valor total do produto em função de seu preço e
