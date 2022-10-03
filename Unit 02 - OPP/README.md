@@ -1,11 +1,11 @@
 ### What you find in this unit:
-*       Concept of classes
-*       Encapsulation
-*       Access modifiers
-*       Variable scope
-*       Objects
-*       Constructors and destructors
-*       Aggregation,
-*       Inheritance 
-*       Polymorphism
+- [x]    Concept of classes
+- [x]   Encapsulation
+- [x]   Access modifiers
+- [x]  Variable scope
+- [x]   Objects
+- [x]    Constructors and destructors
+- [x]    Aggregation,
+- [x]     Inheritance 
+- [x]     Polymorphism
 #### Some exercise statements will be presented in Portuguese - BR for a better understanding of the studies.
