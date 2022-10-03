@@ -59,14 +59,14 @@ void ItemFatura::imprime()
 int main()
 {
     ItemFatura produto1 = ItemFatura(); // Para retornar sem ponteiro
-    ItemFatura produto2(20, "Dantas", 3, 100);
+    ItemFatura produto2(20, "Sorvete", 3, 100);
 
     cout << "PRODUTO 1" << endl;
     cout << "SUA FATURA ANTES: " << endl;
     cout << " " << endl;
     produto1.imprime();
     produto1.setId(10101010);
-    produto1.setNome("Felipe");
+    produto1.setNome("Chocolate");
     produto1.setPrecoUnit(7);
     produto1.setQtd(10);
     cout << " " << endl;
