@@ -45,14 +45,14 @@ public:
 class Fatura
 {
 private:
-    vector<ItemFatura> *p;
+    vector<ItemFatura> *pv; // Uso da classe Vector para declarar vetores | Armazena dados do tipo "Item fatura"
 
 public:
-    Fatura() { p = new vector<ItemFatura>; }
-    ~Fatura() { delete p; }
+    Fatura() { pv = new vector<ItemFatura>; }
+    ~Fatura() { delete pv; } //Destrutor
 
     // Método para adicionar itens no pointer
-    void addItem(ItemFatura it) { p->push_back(it); }
+    void addItem(ItemFatura it) { pv->push_back(it); }
     void totalFatura();
 };
 
@@ -60,21 +60,22 @@ void Fatura::totalFatura()
 {
     cout << "Itens alocados: " << endl;
     float totalSum = 0.0;
-    for (auto c : *p)
+    for (auto c : *pv)
     {
         c.imprime();
-        totalSum += c.totalItem();
+        totalSum += c.totalItem(); // or you can do totalSum = totalSum + c.totalItem();
     }
     cout << "SUA FATURA TOTAL É DE: " << totalSum << endl;
-     cout << "------------------------------ " << endl;
-    cout << "NUBANK PAGAMENTOS" << endl << endl;
+    cout << "------------------------------ " << endl;
+    cout << "NUBANK PAGAMENTOS" << endl
+         << endl;
 }
 
 // Desenvolvendo os métodos
 
 float ItemFatura::totalItem()
 {
-    // retorna o valor total do produto em fun¸c˜ao de seu pre¸co e quantidade
+    // retorna o valor total do produto em função de seu preço e quantidade
     return precoUnit * qtd;
 }
 void ItemFatura::imprime()
@@ -82,7 +83,8 @@ void ItemFatura::imprime()
     cout << "ID: " << id << endl;
     cout << "NOME: " << nome << endl;
     cout << "QUANTIDADE: " << qtd << endl;
-    cout << "PREÇO POR UNIDADE: " << precoUnit << endl << endl;
+    cout << "PREÇO POR UNIDADE: " << precoUnit << endl
+         << endl;
 }
 
 // Função Principal
