@@ -1,89 +1,65 @@
 #include <iostream>
-#include <stdio.h>
-#include <string>
+#include <memory>
+#include <vector>
 
 using namespace std;
-using std::string; // usa a classe std::string
 
-class ItemFatura
-{
+class VeiculoAVenda{
 private:
-    // Atributos privados - Encapsulamento
-    int id;
-    string nome;
-    int qtd;
-    float precoUnit;
-
+    string marca;
+    string modelo;
+    int ano;
+    double precoDeVenda;
 public:
-    // Construtor default - 01                  
-    ItemFatura() = default;
-    ItemFatura(int _id, string _nome, int _qtd, float _precoUnit) : id(_id), nome(_nome), qtd(_qtd), precoUnit(_precoUnit){};
+    VeiculoAVenda(string m, string M, int a, double pdv):
+    marca(m), modelo(M), ano(a), precoDeVenda(pdv) {}
 
-    // Construtor 02 com SET E GET - Inicializa os atributos com todos os valores passados por parâmetro;
-    // Métodos modificadores (SET)
+    // Metodos Seletores
+    string getMarca(){return marca;}
+    string getModelo(){return modelo;}
+    int getAno(){return ano;}
+    double getprecoDeVenda(){return precoDeVenda;}
 
-    void setId(int _id) { id = _id; }
-    void setNome(string _nome) { nome = _nome; }
-    void setQtd(int _qtd) { qtd = _qtd; }
-    void setPrecoUnit(float _precoUnit) { precoUnit = _precoUnit; }
+    //Metodos Modificadores
+    void setMarca(string m){marca = m;}
+    void setModelo(string M){modelo = M;}
+    void setAno(int a){ano = a;}
+    void setprecoDeVenda(double pdv){precoDeVenda = pdv;}
 
-    // Métodos seletores (GET)
-
-    float getId() { return id; }
-    string getNome() { return nome; }
-    int getQtd() { return qtd; }
-    int getPrecoUnit() { return precoUnit; }
-
-    // PROTÓTIPOS DOS MÉTODOS
-    float totalItem();
-    void imprime();
+    virtual void imprime(){
+        cout <<"\nDados do veiculo[1]:\nMarca: "<<getMarca()<<"\nModelo: "<< getModelo()<<"\nAno: "<<getAno()<<"\nprecoDeVenda: R$"<<getprecoDeVenda()<<endl;
+    }
 };
 
-// Desenvolvendo os métodos
+class Moto : public VeiculoAVenda{
+private:
+    float TamAro;
+public:
+    Moto(string m, string M, int a, double pdv, float tA):
+    VeiculoAVenda(m, M, a, pdv), TamAro(tA) {}
 
-float ItemFatura::totalItem()
-{
-    // retorna o valor total do produto em fun¸c˜ao de seu pre¸co e quantidade
-    return precoUnit * qtd;
-}
-void ItemFatura::imprime()
-{
-    cout << "ID: " << id << endl;
-    cout << "NOME: " << nome << endl;
-    cout << "QUANTIDADE: " << qtd << endl;
-    cout << "PREÇO POR UNIDADE: " << precoUnit << endl;
-}
+    float getTamAro(){return TamAro;}
+    void setTamAro(float tA){TamAro = tA;}
 
-// Função Principal
+    void imprime() override {
+        cout <<"\nDados do veiculo[2]:\nMarca: "<<getMarca()<<"\nModelo: "<< getModelo()<<"\nAno: "<<getAno()<<"\nprecoDeVenda: R$"<<getprecoDeVenda()<<"\nTamanho do aro: "<<getTamAro()<<endl;
+    }    
+};
 
-int main()
-{
-    ItemFatura produto1 = ItemFatura(); // Para retornar sem ponteiro
-    ItemFatura produto2(20, "Sorvete", 3, 100);
+int main(){
+    VeiculoAVenda Vav("Honda","Civic",2017,134000);
+    Moto mVav("Honda","Start",2018,13000,28);
 
-    cout << "PRODUTO 1" << endl;
-    cout << "SUA FATURA ANTES: " << endl;
-    cout << " " << endl;
-    produto1.imprime();
-    produto1.setId(10101010);
-    produto1.setNome("Chocolate");
-    produto1.setPrecoUnit(7);
-    produto1.setQtd(10);
-    cout << " " << endl;
-    cout << "SUA FATURA DEPOIS: " << endl;
-    produto1.imprime();
-    cout << "O total eh: " << produto1.totalItem() << endl;
-    cout << "------------------------------" << endl;
+    vector <VeiculoAVenda*> x;
+    x.push_back(&Vav);
+    x.push_back(&mVav);
 
-    cout << "PRODUTO 2" << endl;
-     cout << "SUA FATURA ANTES: " << endl;
-     cout << " " << endl;
-    produto2.imprime();
-    cout << "O total era: " << produto2.totalItem() << endl;
-    produto2.setPrecoUnit(5);
-    cout << " " << endl;
-    cout << "SUA FATURA DEPOIS: " << endl;
-    produto2.imprime();
-    cout << "O total eh: " << produto2.totalItem() << endl;
+    double sum=0;
+
+    for(auto c : x){
+        sum += c->getprecoDeVenda();
+        c->imprime();
+    }
     
+    cout << "\n\nSoma: " << sum << endl;
 }
