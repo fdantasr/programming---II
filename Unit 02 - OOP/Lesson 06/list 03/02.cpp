@@ -12,6 +12,7 @@ public:
     virtual void getarea() =0;
 };
 
+
 class circulo: public ObjetoGeometrico{
 private:
     float val1;
