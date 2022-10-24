@@ -8,32 +8,33 @@ using std::string; // usa a classe std::string
 class ItemFatura
 {
 private:
-    // Atributos privados - Encapsulamento
+    // Atributos privados - Encapsulamento/Implementação
     int id;
     string nome;
     int qtd;
     float precoUnit;
 
-public:
+public: //Métodos são sempre públicos, pois irão ser invocados e manipularão os atributos
+
     // Construtor default - 01
-    ItemFatura() = default;
-    ItemFatura(int _id, string _nome, int _qtd, float _precoUnit) : id(_id), nome(_nome), qtd(_qtd), precoUnit(_precoUnit){};
+    ItemFatura() = default; //Não possuem retorno
 
     // Construtor 02 com SET E GET - Inicializa os atributos com todos os valores passados por parâmetro;
-    // Métodos modificadores (SET)
+    ItemFatura(int _id, string _nome, int _qtd, float _precoUnit) : id(_id), nome(_nome), qtd(_qtd), precoUnit(_precoUnit){};
 
-    void setId(int _id) { id = _id; }
-    void setNome(string _nome) { nome = _nome; }
-    void setQtd(int _qtd) { qtd = _qtd; }
-    void setPrecoUnit(float _precoUnit) { precoUnit = _precoUnit; }
-
-    // Métodos seletores (GET)
+    // Métodos seletores (GET) - Possibilita eu apenas ver o que tá armazenado 
 
     float getId() { return id; }
     string getNome() { return nome; }
     int getQtd() { return qtd; }
     int getPrecoUnit() { return precoUnit; }
 
+    // Métodos modificadores - Modifico meus atributos através do método (SET)
+
+    void setId(int _id) { id = _id; }
+    void setNome(string _nome) { nome = _nome; }
+    void setQtd(int _qtd) { qtd = _qtd; }
+    void setPrecoUnit(float _precoUnit) { precoUnit = _precoUnit; }
     // PROTÓTIPOS DOS MÉTODOS
     float totalItem();
     void imprime();

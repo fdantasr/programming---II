@@ -11,7 +11,7 @@ using std::string; // usa a classe std::string
 class VeiculoAVenda
 {
     // Atributos privados - Encapsulamento
-private:
+private: //Implementação
     string marca;
     string modelo;
     int ano;
