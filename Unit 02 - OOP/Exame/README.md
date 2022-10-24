@@ -46,3 +46,56 @@ Valor: 3x R$ 200
 24/10/2022|R$ 350|Loja
 Total Fatura: R$ 650
 ```
+#### PROGRAMA PRINCIPAL – QUESTÃO 2
+```
+int main() {
+Pessoa pe("João","123.456.789-00");
+Professor pf1("José","012.234.567-89", 2744102);
+Aluno al1("Maria","234.567.890-12", 2020122);
+Professor pf2("Antônio","345.567.789-10", 1740120);
+Aluno al2("Jorge","456.789.012-34", 2721132);
+//30% da nota até aqui
+vector<Pessoa*> pp;
+pp.push_back(&pe);
+pp.push_back(&pf1);
+pp.push_back(&al1);
+pp.push_back(&pf2);
+pp.push_back(&al2);
+//+ 30% da nota até aqui
+for (auto p : pp){
+p->print();
+}
+//+ 30% da nota até aqui
+}
+```
+
+#### SAÍDA ESPERADA – QUESTÃO 2
+```
+--------------
+Nome: João
+CPF: 123.456.789-00
+--------------
+Nome: José
+CPF: 012.234.567-89
+Categoria: Professor
+SIAPE: 2744102
+--------------
+--------------
+Nome: Maria
+CPF: 234.567.890-12
+Categoria: Estudante
+RGA: 2020122
+--------------
+--------------
+Nome: Antônio
+CPF: 345.567.789-10
+Categoria: Professor
+SIAPE: 1740120
+--------------
+--------------
+Nome: Jorge
+CPF: 456.789.012-34
+Categoria: Estudante
+RGA: 2721132
+--------------
+```
