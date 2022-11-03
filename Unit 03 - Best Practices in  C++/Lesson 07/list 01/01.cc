@@ -147,6 +147,7 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         date2 += 1;
+        
     }
     cout << date2.imprime() << endl;
 
