@@ -1,4 +1,4 @@
-#### LIST 02
+#### LIST 02 - Espaços de nomes (Namespaces)
 
 #### Exer 01:
 Escreva um programa que declare duas funçoes de nome soma que some dois números inteiros.
