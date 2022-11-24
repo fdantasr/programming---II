@@ -10,13 +10,11 @@ namespace soma2{
         return a+b;
     }
 }
-
 int main(){
 
 std::cout << soma1::soma(2, 4) << std::endl;
 
 std::cout << soma2::soma(8, 4) << std::endl;
-
 
 
 }
