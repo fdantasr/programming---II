@@ -1,26 +1,40 @@
 #include <iostream>
 using namespace std;
 
+template <typename T, typename U>
 
 class Pair
 {
 public:
-    Pair(const int &t, const int &u)
-        : first(t), second(u)
+    // Construtor for pair
+    Pair(const T &t, const U &u) : first(t), second(u) {}
+
+    T &get_first() { return first; }
+    U &get_second() { return second; }
+
+    const T &get_first() const { return first; }
+    const U &get_second() const { return second; }
+
+    void printPair()
     {
+        cout << "o" << first << ", " << second << ")" << endl;
     }
-    int &get_first() { return first; }
-    int &get_second() { return second; }
-    const int &get_first() const { return first; }
-    const int &get_second() const { return second; }
+
+    void addPair()
+    {
+        auto x = first + second;
+        cout << x << endl;
+    }
 
 private:
-    int first;
-    int second;
+    T first;
+    U second;
 };
 
-
-int main(){
-
-
-}
+int main()
+{
+    string x = "dog", y="cat";
+    Pair<string, string> res(x, y);
+    res.printPair();
+    res.addPair();
+};
