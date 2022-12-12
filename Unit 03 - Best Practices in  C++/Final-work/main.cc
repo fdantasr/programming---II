@@ -12,24 +12,24 @@ int main (){
 
     //t2.frear();
 
-    Trabalho::Carro t3("Monza",20,2002);
+    Trabalho::Carro t3("Carro",20,2002);
     //t3.frear();
 
-    Trabalho::Aereo t4("Zeppelin-09/11",1000, 700,7);
+    Trabalho::Aereo t4("Zeppelin",1000, 700,7);
     
     //t4.subir(600);
     //t4.descer(606);
     //t4.descer(1);
     //t4.descer(666);
 
-    Trabalho::Aviaum t5("Teco-teco",300,1225,1000);
+    Trabalho::Aviaum t5("Aviao",300,1225,1000);
     t5.subir(700);
     t5.descer(706);
     t5.descer(1);
     t5.descer(766);
     t5.subir(9999);
 
-    Trabalho::Balaum t6("balaumzaum",300,12251,300);
+    Trabalho::Balaum t6("Balao",200,12251,300);
     t6.subir(500);
     t6.descer(706);
     t6.descer(1000);

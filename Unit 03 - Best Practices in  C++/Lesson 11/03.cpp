@@ -4,8 +4,10 @@ using namespace std;
 template <typename T, typename U>
 
 class Pair
+
 {
 public:
+
     // Construtor for pair
     Pair(const T &t, const U &u) : first(t), second(u) {}
 
