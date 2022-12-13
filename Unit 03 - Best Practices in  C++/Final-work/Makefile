@@ -1,10 +1,10 @@
 # mingw32-make
-# ./teste
+# ./finalwork
 
-all: teste
+all: finalwork
 
-teste: main.o proto.o
-	g++ -o teste main.o proto.o
+finalwork: main.o proto.o
+	g++ -o finalwork main.o proto.o
 
 main.o: main.cc 
 	g++ -c main.cc 
@@ -14,4 +14,4 @@ proto.o: proto.cc
 
 
 clean:
-	rm -rf *.o *~ teste
+	rm -rf *.o *~ finalwork

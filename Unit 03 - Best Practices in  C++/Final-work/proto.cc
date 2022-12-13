@@ -20,18 +20,6 @@ namespace Trabalho
     std::string Transporte::getNome() { return Nome; }
     int Transporte::getNumPassageiros() { return numPassageiros; }
     int Transporte::getVelocidadAtual() { return velocidadeAtual; }
-    // Método estaParado
-    bool Transporte::estaParado()
-    {
-        if (velocidadeAtual == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 
     //---------------Operador---------------
     void operator>(Transporte &obj1, Transporte &obj2)
@@ -55,20 +43,19 @@ namespace Trabalho
     // Construtor
     Terrestre::Terrestre() = default;
     Terrestre::Terrestre(std::string nome, int numpassageiros, int velocidadeatual) : Transporte(nome, numpassageiros, velocidadeatual) {}
-    // Método
-    void Terrestre::frear()
+    // Método estaParado
+    bool Terrestre::estaParado()
     {
         if (getVelocidadAtual() == 0)
         {
-            std::cout << "Nao é possivel frear mais que isso" << std::endl;
+            return true;
         }
         else
         {
-            int aux = getVelocidadAtual() * 0.25;
-            setVelocidadAtual(getVelocidadAtual() - aux);
-            std::cout << "Velocidade atual: " << getVelocidadAtual() << std::endl;
+            return false;
         }
     }
+    
 
     //-----Carro-----
 
@@ -99,25 +86,19 @@ namespace Trabalho
     void Aereo::setAltura(int altura) { Altura = altura; }
     // Seletor
     int Aereo::getAltura() { return Altura; }
-    // Métodos
-    void Aereo::subir(int metros)
+    
+// Método estaParado
+    bool Aereo::estaParado()
     {
-        Altura += metros;
-        std::cout << "Altura atual: " << Altura << std::endl;
-    }
-    void Aereo::descer(int metros)
-    {
-        if (Altura == 0)
+        if (getVelocidadAtual() == 0)
         {
-            std::cout << "Colisao com o chao!!!" << std::endl;
+            return true;
         }
         else
         {
-            Altura -= metros;
-            std::cout << "Altura atual: " << Altura << std::endl;
+            return false;
         }
     }
-
     //-----Aviaum-----
 
     // Construtor
@@ -128,7 +109,7 @@ namespace Trabalho
     {
         if (metros + getAltura() > 10000)
         {
-            std::cout << "Aviao estah muito alto!" << std::endl;
+            std::cout << "Aviao estah muito alto [Acima dos 10.000]!" << std::endl;
         }
         else
         {
@@ -142,6 +123,11 @@ namespace Trabalho
         {
             std::cout << "Muito próximo do chao/bateu!!!";
         }
+         else if (getAltura() - metros < 0)
+        {
+           std::cout << "Limite do chao abaixo de 0 [ERRO]" << std::endl;
+        }
+        
         else
         {
             setAltura(getAltura() - metros);
@@ -159,7 +145,7 @@ namespace Trabalho
     {
         if (metros + getAltura() > 1000)
         {
-            std::cout << "Balao muito alto!" << std::endl;
+            std::cout << "Balao muito alto! [Acima dos 1.000]" << std::endl;
         }
         else
         {

@@ -2,10 +2,11 @@
 #define proto_h
 #include <iostream>
 
+
 namespace Trabalho
 {
 
-    //-----Transporte-----
+    //-----Transporte - CLASSE PURAMENTE VIRTUAL-----
     class Transporte
     {
     private:
@@ -26,12 +27,12 @@ namespace Trabalho
         int getNumPassageiros();
         int getVelocidadAtual();
         // Método
-        virtual bool estaParado();
+        virtual bool estaParado() = 0;
         // Função
         friend void operator>(Transporte &obj1, Transporte &obj2);
     };
 
-    //-----Terrestre-----
+    //-----Terrestre - CLASSE PURAMENTE VIRTUAL-----
     class Terrestre : public Transporte
     {
     public:
@@ -39,7 +40,8 @@ namespace Trabalho
         Terrestre();
         Terrestre(std::string nome, int numpassageiros, int velocidadeatual);
         // Método/
-        virtual void frear();
+        virtual void frear() = 0;
+        bool estaParado() override;
     };
 
     //-----Carro-----
@@ -53,7 +55,7 @@ namespace Trabalho
         void frear() override;
     };
 
-    //-----Aereo-----
+    //-----Aereo - CLASSE PURAMENTE VIRTUAL-----
     class Aereo : public Transporte
     {
     private:
@@ -68,8 +70,9 @@ namespace Trabalho
         // Seletor
         int getAltura();
         // Métodos
-        virtual void subir(int);
-        virtual void descer(int);
+        virtual void subir(int) = 0;
+        virtual void descer(int) = 0;
+        bool estaParado() override;
     };
 
     //-----Aviaum-----
